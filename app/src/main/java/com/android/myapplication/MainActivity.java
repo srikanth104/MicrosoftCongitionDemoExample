@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -58,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         imgPicked = (ImageView) findViewById(R.id.iv_selected_Image);
         etResult = (EditText) findViewById(R.id.et_results);
         faceAttributes = new ArrayList<>();
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
         btnCamera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
